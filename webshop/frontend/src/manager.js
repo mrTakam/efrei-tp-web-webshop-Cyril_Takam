@@ -1,4 +1,4 @@
-const Product = require('./models/product');
+const Product = require('../../backend/models/product');
 
 // Initialize products in the database
 const initProducts = async () => {

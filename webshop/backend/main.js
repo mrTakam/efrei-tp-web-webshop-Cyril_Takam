@@ -2,12 +2,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const productRoutes = require('./models/productRoutes');
-const { initProducts, Cart } = require('./manager');
+const { initProducts, Cart } = require('../frontend/src/manager');
 
 const app = express();
 
+const mongoURI = 'mongodb+srv://cyriltakam:<AKuJUkMseK1cM8fm>@cluster0.u4rfewm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/webshop', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Middleware
 app.use(bodyParser.json());

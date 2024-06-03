@@ -48,7 +48,7 @@
 
 <script>
 // eslint-disable-next-line no-unused-vars
-import {Stock, Product, Cart} from '../../../backend/manager';
+import {Stock, Product, Cart} from '../manager';
 
 export default {
   name: 'IndexPage',
